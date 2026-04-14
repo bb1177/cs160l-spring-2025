@@ -113,5 +113,19 @@ public class SinglyLinkedList {
             4. Iterate through the linkedlist and print all the courses
          */
 
+        SinglyLinkedList courseList = new SinglyLinkedList();
+
+        courseList = insert(courseList, "CS150");
+        courseList = insert(courseList, "CS160");
+        courseList = insert(courseList, "CS210");
+        
+        deleteByKey(courseList, "CS150");
+        deleteByKey(courseList, "CS160");
+        
+        courseList = insert(courseList, "CS150L");
+        courseList = insert(courseList, "CS160L");
+        
+        printList(courseList);
+
     }
 }
