@@ -47,6 +47,9 @@ public class LinkedListExample {
 
         // TODO: Write your code to add janice to the list in place of jane
         // Replace jane with janice
+        list.addFirst(new Student(5L, "Temp", 4.0, StudentLevel.FRESHMAN, StudentMajor.COMPUTER_SCIENCE));
+        list.removeFirst();
+        list.set(list.indexOf(jane), janice);
     }
 
 }
