@@ -20,6 +20,23 @@ public class BinarySearch implements Search {
      * write an algorithm that runs in O(log(n)) time, where n is input size
      * to compare value use .compareTo method rather than > or < operators
      */
+    int left = 0;
+    int right = list.size() - 1;
+    
+    while (left <= right) {
+        int mid = (left + right) / 2;
+        int cmp = list.get(mid).compareTo(t);
+    
+        if (cmp == 0) {
+            return mid;
+        } else if (cmp < 0) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    
+    return -1;
     @Override
     public <T extends Comparable<? super T>> int search(List<T> list, T t) {
         return -1;
